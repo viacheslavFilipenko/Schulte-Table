@@ -5,9 +5,43 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.schulte-table {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cell {
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  font-size: 8vh;
+  flex-grow: 1;
+  flex-basis: 0;
+  transition: background 800ms;
+  cursor: default;
+}
+
+.cell:hover {
+  border: 1px solid #555;
+}
+
+.cell.checked {
+  background: #beffb8;
+}
+
+.cell.error {
+  background: #ff6e7e;
 }
